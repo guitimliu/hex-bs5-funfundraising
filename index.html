@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,10 @@
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+    <nav class="header navbar navbar-expand-lg navbar-light border-warning border-bottom border-5 mb-5">
+        <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/logo.jpg" alt="拚拚">
+            <img class="logo" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/logo.jpg" alt="拚拚">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,46 +28,80 @@
                 <a class="nav-link" href="#">我有個大膽的想法</a>
               </li>
             </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <a class="btn btn-warning rounded-pill py-1 px-3 me-3" data-bs-toggle="modal" data-bs-target="#loginModel" href="#">登入</a>
+              <a class="btn btn-outline-secondary rounded-pill py-1 px-3" href="#">註冊</a>
+            </ul>
           </div>
         </div>
     </nav>
+
+    <!-- loginModel -->
+    <div class="modal fade" id="loginModel" tabindex="-1" aria-labelledby="loginModelLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="mumberAccount" class="form-label">帳號</label>
+                <input type="text" class="form-control" id="mumberAccount" required>
+              </div>
+              <div class="mb-3">
+                <label for="memberPassword" class="form-label">密碼</label>
+                <input type="password" class="form-control" id="memberPassword" required>
+              </div>
+              <p><a href="#">忘記密碼</a></p>
+              <button class="btn btn-warning rounded-pill w-100">登入</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
         <span class="badge bg-secondary px-3 mb-2">魔法科技</span>
         <h1 class="h3 fw-bold">拍出會動的照片 | LivePhotos 魔法拍立得</h1>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/produt_image.jpg" alt="">
             </div>
-            <div class="col-lg-6">
-                <p>目標 $600,000</p>
-                <p>$280,047</p>
-                <!-- 進度條 -->
+            <div class="col-lg-5">
+                <small>目標 $600,000</small>
+                <p class="h3 fw-bold">$280,047</p>
+                <div class="progress mt-3 mb-3">
+                  <div class="bg-warning progress-bar" role="progressbar" style="width: 41%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41%</div>
+                </div>
                 <div class="row">
                     <div class="col-6">
-                        <p>贊助人數</p>
-                        <p>1374人</p>
+                        <small>贊助人數</small>
+                        <p class="h3 fw-bold mt-3 mb-3">1374人</p>
                     </div>
                     <div class="col-6">
-                        <p>募資倒數</p>
-                        <p>27天</p>
+                        <small>募資倒數</small>
+                        <p class="h3 fw-bold mt-3 mb-3">27天</p>
                     </div>
                 </div>
                 <!-- 四個圖示 -->
-                <p>
+                <p class="border-start border-warning border-5 ps-3">
                     專案募資中！</br>
                     在2021/06/14 23:59 募資結束前，您都可以贊助我們！
                 </p>
-                <button>贊助專案</button>
-                <button>追蹤專案</button>
-                <button>分享</button>
+                <a class="btn btn-warning rounded-pill w-100 mb-2" href="#">贊助專案</a>
+                <div class="row">
+                  <div class="col-6">
+                    <a class="btn btn-outline-secondary border-2 rounded-pill w-100" href="#">追蹤專案</a>
+                  </div>
+                  <div class="col-6">
+                    <a class="btn btn-outline-secondary border-2 rounded-pill w-100" href="#">分享</a>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <nav class="navbar navbar-expand-lg navbar-light">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -87,46 +121,93 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-              <p>只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<a href="#">聯絡提案人</a>！</p>
-              <div class="card card-body ">
-                <div class="mb-3 d-flex justify-content-start">
-                  <img src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/user_img01.jpg" />
-                  <div class="d-flex flex-column ms-3">
-                    <a href="#">廖小杰</a>
-                    <small>
-                      2020年5月22日 11:32
-                    </small>
-                  </div>
-                </div>
-              </div>
+          <!-- *專案介紹* -->
+          <div class="col-lg-8">
+            <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/p1.jpg" alt="">
+              <h3 class="h4 fw-bold border-start border-warning border-5 ps-3 mt-3 mb-2"> 施了魔法的照片</h3>
+              <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
+              <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/p2.jpg" alt="">
+              <h3 class="h4 fw-bold border-start border-warning border-5 ps-3 mt-3 mb-2">留下當下的美好</h3>
+              <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
               
-            </div>
+              <!-- 愛心 -->
+              <!-- 分隔線與贊助專案 -->
+
+              <form>
+                <div class="mb-3">
+                  <label for="selectProject" class="form-label">贊助方案</label>
+                  <select class="form-select" id="selectProject" required>
+                    <option value="1">方案一</option>
+                    <option value="2">方案二</option>
+                    <option value="3">方案三</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="receiverName" class="form-label">收件人姓名</label>
+                  <input type="text" class="form-control" id="receiverName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="receiverAddress" class="form-label">收件人地址</label>
+                  <input type="text" class="form-control" id="receiverAddress" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactPhone" class="form-label">聯絡電話</label>
+                  <input type="text" class="form-control" id="contactPhone" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">聯絡信箱</label>
+                  <input type="email" class="form-control" id="contactEmail" required>
+                </div>
+                <button class="btn btn-warning rounded-pill">贊助專案</button>
+              </form>
+          </div>
             <div class="col-lg-4">
-                <h2 class="h4">選擇一個方案來支持</h2>
-                
-                <div>
-                  <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/img.jpg" alt="">
-                  <span>限時優惠</span><span>2 days 20:05:20</span>
-                  <p>買一送一，只有兩百組別錯過</p>
-                  <p>NT$ 1600</p>
-                  <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
-                  <button>贊助此專案</button>
+                <div class="card p-3 mb-3">
+                  <div class="mb-3 d-flex justify-content-start">
+                    <img src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/store_img.jpg" alt="">
+                    <div class="d-flex flex-column ms-3">
+                      <h2 class="h4 fw-bold">缺錢事務所</h2>
+                      <p class="h6 fw-bold">已發起 1 個專案</p>
+                    </div>
+                  </div>
+                  
+                  需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！
                 </div>
-                
-                <div>
-                  <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/img.jpg" alt="">
-                  <span>限時優惠</span><span>2 days 20:05:20</span>
-                  <p>買一送一，只有兩百組別錯過</p>
-                  <p>NT$ 1600</p>
-                  <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
-                  <button>贊助此專案</button>
-                </div>
+                <h2 class="h5 border-start border-end border-warning border-5 text-center pt-2 pb-2 fw-bold">選擇一個方案來支持</h2>
+                <ul class="navbar-nav">
+                  <li class="card mb-3">
+                    <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/img.jpg" alt="">
+                    <div class="card-body">
+                      <p class="d-flex justify-content-between">
+                        <span>限時優惠</span>
+                        <span>2 days 20:05:20</span>
+                      </p>
+                      <h2 class="h5 fw-bold">買一送一，只有兩百組別錯過</h2>
+                      <p class="h5 fw-bold">NT$ 1600</p>
+                      <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+                      <button class="btn btn-warning rounded-pill w-100">贊助此專案</button>
+                    </div>
+                  </li>
+                  <ul class="navbar-nav">
+                  <li class="card mb-3">
+                    <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/img.jpg" alt="">
+                    <div class="card-body">
+                      <p class="d-flex justify-content-between">
+                        <span>限時優惠</span>
+                        <span>2 days 20:05:20</span>
+                      </p>
+                      <h2 class="h5 fw-bold" class="h5 fw-bold">買一送一，只有兩百組別錯過</h2>
+                      <p>NT$ 1600</p>
+                      <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+                      <button class="btn btn-warning rounded-pill w-100">贊助此專案</button>
+                    </div>
+                  </li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer text-center">
       <p>Copyright � 拼拼 All rights reserved.</p>
     </div>
 
@@ -134,31 +215,7 @@
 </body>
 </html>
 
-<!-- *專案介紹* -->
-            <div class="col-lg-8">
-              <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/p1.jpg" alt="">
-                <h3 class="h2 border-start border-5"> 施了魔法的照片</h3>
-                <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
-                <img class="img-fluid" src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/p2.jpg" alt="">
-                <h3 class="h2">留下當下的美好</h3>
-                <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
-                
-                <!-- 愛心 -->
-                <!-- 分隔線與贊助專案 -->
 
-                <p><label for="">贊助專案</label></p>
-                <p><input type="text"></input></p>
-                <p><label for="">收件人姓名</label></p>
-                <p><input type="text"></input></p>
-                <p><label for="">聯絡電話</label></p>
-                <p><input type="text"></input></p>
-                <p><label for="">聯絡信箱</label></p>
-                <p><input type="text"></input></p>
-                <p><label for="">付款方式</label></p>
-                <p><input type="text"></input></p>
-
-                <p><button>贊助專案</button></p>
-            </div>
 
 
 <!-- *目前進度* -->
@@ -210,4 +267,24 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
+
+
+<div class="col-lg-8">
+  <p>只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<a href="#">聯絡提案人</a>！</p>
+  <div class="card card-body ">
+    <div class="mb-3 d-flex justify-content-start">
+      <img src="https://ecjia.com.tw/demo/bs5_homework_0526/assets/user_img01.jpg" />
+      <div class="d-flex flex-column ms-3">
+        <a href="#">廖小杰</a>
+        <small>
+          2020年5月22日 11:32
+        </small>
+      </div>
+    </div>
+  </div>
+  
 </div>
