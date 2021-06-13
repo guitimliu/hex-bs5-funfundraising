@@ -1,0 +1,21 @@
+.header .logo {
+  width: 111px;
+  height: 40px;
+}
+
+footer {
+  background: #494846;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #ff785e;
+  color: white;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #FFDF65;
+  color: #6c757d;
+  border: #FFDF65 solid 3px;
+}
+/*# sourceMappingURL=global.css.map */

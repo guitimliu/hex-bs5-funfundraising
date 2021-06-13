@@ -2232,7 +2232,7 @@ progress {
   color: #494846;
   background-color: #f7f7f7;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #f7f7f7;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2477,7 +2477,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid #f7f7f7;
   border-radius: 0.25rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2885,7 +2885,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  border: 1px solid #f7f7f7;
   border-radius: 0.25rem;
 }
 

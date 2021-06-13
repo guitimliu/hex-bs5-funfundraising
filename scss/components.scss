@@ -1,0 +1,12 @@
+.nav-link.active {
+    border-bottom: 3px solid #FFDF65;
+    font-weight: bold;
+}
+
+.nav-top {
+    top: 80px;
+}
+
+.nav-h {
+    height: calc(100vh - 80px);;
+}
