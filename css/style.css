@@ -11479,6 +11479,11 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  font-size: 16px;
+  font-family: "NotoSansCJKtc-Regular";
+}
+
 .header .logo {
   width: 111px;
   height: 40px;
